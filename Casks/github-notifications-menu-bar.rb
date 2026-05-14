@@ -10,6 +10,12 @@ cask "github-notifications-menu-bar" do
   depends_on macos: ">= :ventura"
   app "GitHubNotifications.app"
 
+  # Strip the quarantine attribute so Gatekeeper doesn't block an ad-hoc-signed app.
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/GitHubNotifications.app"]
+  end
+
   zap trash: [
     "~/.config/gh-notif-bar",
   ]

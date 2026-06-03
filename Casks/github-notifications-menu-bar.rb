@@ -1,6 +1,6 @@
 cask "github-notifications-menu-bar" do
-  version "1.2.1"
-  sha256 "ab4c71e026e55a232ce8d1ab2f55b82404417331bcb79d95f713b15c77f2d50f"
+  version "1.3.0"
+  sha256 "ec23c535cef4c266d11b24adf692fd12ec4af02735a8bacb48340e455ad12c08"
 
   url "https://github.com/apomerenk/github-notification-menu-bar/releases/download/v#{version}/GitHubNotifications-#{version}.zip"
   name "GitHub Notifications"
